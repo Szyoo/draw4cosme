@@ -46,7 +46,7 @@ public class DriverService {
         // 配置 ChromeOptions
         ChromeOptions options = new ChromeOptions();
         // 无头模式，浏览器在后台运行，不显示界面
-        options.addArguments("--headless");
+        // options.addArguments("--headless");
         // 禁用沙箱模式，可能需要在某些环境（如 Docker 或某些 Linux 环境）中使用
         options.addArguments("--no-sandbox");
         // 禁止使用 /dev/shm，可以避免在某些系统中 /dev/shm 大小不足导致的问题

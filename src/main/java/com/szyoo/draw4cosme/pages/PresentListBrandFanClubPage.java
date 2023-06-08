@@ -1,6 +1,5 @@
 package com.szyoo.draw4cosme.pages;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.szyoo.draw4cosme.service.DriverService;
@@ -14,7 +13,6 @@ public class PresentListBrandFanClubPage extends PresentListPage {
     private static final String[] CSS_SELECTORS = {
             "div[class=psnt]>ul[class=clearfix]>li>a[href*='cosme.net/brand/brand_id']" };
 
-    @Autowired
     public PresentListBrandFanClubPage(DriverService driverService) {
         super(driverService.getDriver());
     }

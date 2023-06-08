@@ -5,7 +5,6 @@ import java.util.List;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.szyoo.draw4cosme.entity.Present;
@@ -14,7 +13,8 @@ import com.szyoo.draw4cosme.pages.PresentListPage;
 import com.szyoo.draw4cosme.pages.PresentListBrandFanClubPage;
 import com.szyoo.draw4cosme.pages.PresentListNormalPage;
 import com.szyoo.draw4cosme.repository.PresentRepository;
-@Service  // 声明这个类是一个 Spring Service
+
+@Service // 声明这个类是一个 Spring Service
 public class PresentService {
 
     private final WebDriver driver;
@@ -26,16 +26,15 @@ public class PresentService {
     /**
      * 构造函数，使用依赖注入初始化变量
      *
-     * @param driverService            提供WebDriver的服务类实例
-     * @param presentListNormalPage    普通奖品列表页面实例
+     * @param driverService               提供WebDriver的服务类实例
+     * @param presentListNormalPage       普通奖品列表页面实例
      * @param presentListBrandFanClubPage 品牌粉丝俱乐部奖品列表页面实例
-     * @param presentRepository        操作数据库的仓库实例
+     * @param presentRepository           操作数据库的仓库实例
      */
-    @Autowired
-    public PresentService(DriverService driverService, 
-                          PresentListNormalPage presentListNormalPage,
-                          PresentListBrandFanClubPage presentListBrandFanClubPage, 
-                          PresentRepository presentRepository) {
+    public PresentService(DriverService driverService,
+            PresentListNormalPage presentListNormalPage,
+            PresentListBrandFanClubPage presentListBrandFanClubPage,
+            PresentRepository presentRepository) {
         this.driver = driverService.getDriver();
         this.driverService = driverService;
         this.presentListNormalPage = presentListNormalPage;
@@ -116,4 +115,3 @@ public class PresentService {
         }
     }
 }
-

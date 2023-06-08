@@ -1,6 +1,5 @@
 package com.szyoo.draw4cosme.pages;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.szyoo.draw4cosme.service.DriverService;
@@ -15,7 +14,6 @@ public class PresentListNormalPage extends PresentListPage {
             "a[href*='/as.iy.impact-ad.jp/ct?id=']"
     };
 
-    @Autowired
     public PresentListNormalPage(DriverService driverService) {
         super(driverService.getDriver());
     }
